@@ -1,15 +1,15 @@
 # Prueba técnica Evaluación Java
-_Desarrolle una aplicación que exponga una API RESTful de creación de usuarios._<br />
+_Desarrolle una aplicación que exponga una API RESTful de creación de usuarios._
 _Todos los endpoints deben aceptar y retornar solamente JSON, inclusive al para los mensajes de
-error._ <br />
-_Todos los mensajes deben seguir el formato:_ <br />
+error._ 
+_Todos los mensajes deben seguir el formato:_ 
 ```
     {"mensaje": "mensaje de error"}
 ```
 
 Registro: <br />
 * _Ese endpoint deberá recibir un usuario con los campos "nombre", "correo", "contraseña",
-más un listado de objetos "teléfono", respetando el siguiente formato:_ <br />
+más un listado de objetos "teléfono", respetando el siguiente formato:_ 
 ```
     {
         "name": "Juan Rodriguez",
@@ -24,23 +24,37 @@ más un listado de objetos "teléfono", respetando el siguiente formato:_ <br />
         ]
     }
 ```
-_Responder el código de status HTTP adecuado_ <br />
-_En caso de éxito, retorne el usuario y los siguientes campos:_ <br />
+_Responder el código de status HTTP adecuado_
+_En caso de éxito, retorne el usuario y los siguientes campos:_ 
 * _id: id del usuario (puede ser lo que se genera por el banco de datos, pero sería
-más deseable un UUID)_<br />
-* _created: fecha de creación del usuario_<br />
-* _modified: fecha de la última actualización de usuario_<br />
+más deseable un UUID)_
+* _created: fecha de creación del usuario_
+* _modified: fecha de la última actualización de usuario_
 * _last_login: del último ingreso (en caso de nuevo usuario, va a coincidir con la
-fecha de creación)_<br />
-* _token: token de acceso de la API (puede ser UUID o JWT)_<br />
-* _isactive: Indica si el usuario sigue habilitado dentro del sistema._<br />
+fecha de creación)_
+* _token: token de acceso de la API (puede ser UUID o JWT)_
+* _isactive: Indica si el usuario sigue habilitado dentro del sistema._
 * _Si caso el correo conste en la base de datos, deberá retornar un error "El correo ya
-registrado"._<br />
-* _El correo debe seguir una expresión regular para validar que formato sea el correcto. (aaaaaaa@dominio.cl)_<br />
+registrado"._
+* _El correo debe seguir una expresión regular para validar que formato sea el correcto. (aaaaaaa@dominio.cl)_
 * _La clave debe seguir una expresión regular para validar que formato sea el correcto. (El
-valor de la expresión regular debe ser configurable)_<br />
-* _El token deberá ser persistido junto con el usuario_<br />
-
+valor de la expresión regular debe ser configurable)_
+* _El token deberá ser persistido junto con el usuario_<br /><br />
+_Requisitos_<br />
+* _Plazo: 2 días, si tienes algún inconveniente con el tiempo comunicate con nosotros
+* _Banco de datos en memoria. Ejemplo: HSQLDB o H2.
+* _Proceso de build vía Gradle o Maven.
+* _Persistencia con JPA. Ejemplo: EclipseLink, Hibernate u OpenJPA.
+* _Framework SpringBoot.
+* _Java 8+
+* _Entrega en un repositorio público (github o bitbucket) con el código fuente y script de
+  creación de BD.
+* _Readme explicando cómo probarlo.
+* _Diagrama de la solución.<br /><br />
+_Requisitos opcionales_<br />
+* _JWT como token
+* _Pruebas unitarias
+* _Swagger
 # SOLUCIÓN
 
 _Se realizaron servicios de autenticación, creación de usuarios, actualizar el estado del usuario y conseguir el usuario por el id._
