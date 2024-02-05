@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "0cc1a068-a60f-4fb2-955a-b0dd5636a774",
+		"name": "Prueba tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5720344",
+		"_collection_link": "https://restless-comet-337493.postman.co/workspace/Team-Workspace~02d4e4ad-73cb-489f-8e5e-b6d451dca360/collection/5720344-0cc1a068-a60f-4fb2-955a-b0dd5636a774?action=share&source=collection_link&creator=5720344"
+	},
+	"item": [
+		{
+			"name": "Guardar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3cGFsb21pbm9AcHJ1ZWJhLmNvbSIsImV4cCI6MTcwNzE1NjAxNCwiaWF0IjoxNzA3MTUyNDE0LCJlbWFpbCI6IndwYWxvbWlub0BwcnVlYmEuY29tIn0.gVWhqZNzmjcsbeR5RbLg47le8L3eDeeYEjVhR2Ry7H8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan Rodriguez\",\r\n    \"email\": \"juan@rodriguez.org\",\r\n    \"password\": \"Elmaestro1@\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"9876543210\",\r\n            \"citycode\": \"1\",\r\n            \"countrycode\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/v1/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"v1",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update State",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3cGFsb21pbm9AcHJ1ZWJhLmNvbSIsImV4cCI6MTcwNzE1NjAxNCwiaWF0IjoxNzA3MTUyNDE0LCJlbWFpbCI6IndwYWxvbWlub0BwcnVlYmEuY29tIn0.gVWhqZNzmjcsbeR5RbLg47le8L3eDeeYEjVhR2Ry7H8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8089/v1/user/update/state?email=wpalomino@prueba.com&state=true",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"v1",
+						"user",
+						"update",
+						"state"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "wpalomino@prueba.com"
+						},
+						{
+							"key": "state",
+							"value": "true"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"wpalomino@prueba.com\",\r\n    \"password\": \"Elmaestro1$\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/v1/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3cGFsb21pbm9AcHJ1ZWJhLmNvbSIsImV4cCI6MTcwNzE1NjAxNCwiaWF0IjoxNzA3MTUyNDE0LCJlbWFpbCI6IndwYWxvbWlub0BwcnVlYmEuY29tIn0.gVWhqZNzmjcsbeR5RbLg47le8L3eDeeYEjVhR2Ry7H8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8089/v1/user?email=juan@rodriguez.org",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "juan@rodriguez.org"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -17,18 +17,18 @@ public class IUserServiceTest {
     public void setup() {
         userService = Mockito.mock(IUserService.class);
         user = new Users();
-        user.setName("John Doe");
-        user.setEmail("john.doe@example.com");
-        user.setPassword("password");
+        user.setName("Wilmer Palomino");
+        user.setEmail("wilmer_palomino@gmail.com");
+        user.setPassword("elmaestro");
     }
 
     @Test
-    public void testRegisterUser_Success() {
+    public void testRegisterUserSuccess() {
         Users expectedUser = new Users();
         expectedUser.setId(UUID.randomUUID());
-        expectedUser.setName("John Doe");
-        expectedUser.setEmail("john.doe@example.com");
-        expectedUser.setPassword("password");
+        expectedUser.setName("Wilmer Palomino");
+        expectedUser.setEmail("wilmer_palomino@gmail.com");
+        expectedUser.setPassword("elmaestro");
 
         Mockito.when(userService.registerUser(user)).thenReturn(expectedUser);
 
@@ -41,14 +41,14 @@ public class IUserServiceTest {
     }
 
     @Test
-    public void testUpdateUser_Success() {
-        String email = "john.doe@example.com";
+    public void testUpdateUserSuccess() {
+        String email = "wilmer_palomino@gmail.com";
         Boolean state = true;
         Users expectedUser = new Users();
         expectedUser.setId(UUID.randomUUID());
-        expectedUser.setName("John Doe");
-        expectedUser.setEmail("john.doe@example.com");
-        expectedUser.setPassword("password");
+        expectedUser.setName("Wilmer Palomino");
+        expectedUser.setEmail("wilmer_palomino@gmail.com");
+        expectedUser.setPassword("elmaestro");
         expectedUser.setIsActive(state);
 
         Mockito.when(userService.updateUser(email, state)).thenReturn(expectedUser);
@@ -63,13 +63,13 @@ public class IUserServiceTest {
     }
 
     @Test
-    public void testGetUserByEmail_Success() {
-        String email = "john.doe@example.com";
+    public void testGetUserByEmailSuccess() {
+        String email = "wilmer_palomino@gmail.com";
         Users expectedUser = new Users();
         expectedUser.setId(UUID.randomUUID());
-        expectedUser.setName("John Doe");
-        expectedUser.setEmail("john.doe@example.com");
-        expectedUser.setPassword("password");
+        expectedUser.setName("Wilmer Palomino");
+        expectedUser.setEmail("wilmer_palomino@gmail.com");
+        expectedUser.setPassword("elmaestro");
 
         Mockito.when(userService.getUserByEmail(email)).thenReturn(expectedUser);
 

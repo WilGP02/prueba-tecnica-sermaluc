@@ -1,10 +1,58 @@
 # Prueba técnica Evaluación Java
+_Desarrolle una aplicación que exponga una API RESTful de creación de usuarios._<br />
+_Todos los endpoints deben aceptar y retornar solamente JSON, inclusive al para los mensajes de
+error._ <br />
+_Todos los mensajes deben seguir el formato:_ <br />
+```
+    {"mensaje": "mensaje de error"}
+```
+
+Registro: <br />
+* _Ese endpoint deberá recibir un usuario con los campos "nombre", "correo", "contraseña",
+más un listado de objetos "teléfono", respetando el siguiente formato:_ <br />
+```
+    {
+        "name": "Juan Rodriguez",
+        "email": "juan@rodriguez.org",
+        "password": "hunter2",
+        "phones": [
+            {
+                "number": "1234567",
+                "citycode": "1",
+                "contrycode": "57"
+            }
+        ]
+    }
+```
+_Responder el código de status HTTP adecuado_ <br />
+_En caso de éxito, retorne el usuario y los siguientes campos:_ <br />
+* _id: id del usuario (puede ser lo que se genera por el banco de datos, pero sería
+más deseable un UUID)_<br />
+* _created: fecha de creación del usuario_<br />
+* _modified: fecha de la última actualización de usuario_<br />
+* _last_login: del último ingreso (en caso de nuevo usuario, va a coincidir con la
+fecha de creación)_<br />
+* _token: token de acceso de la API (puede ser UUID o JWT)_<br />
+* _isactive: Indica si el usuario sigue habilitado dentro del sistema._<br />
+* _Si caso el correo conste en la base de datos, deberá retornar un error "El correo ya
+registrado"._<br />
+* _El correo debe seguir una expresión regular para validar que formato sea el correcto. (aaaaaaa@dominio.cl)_<br />
+* _La clave debe seguir una expresión regular para validar que formato sea el correcto. (El
+valor de la expresión regular debe ser configurable)_<br />
+* _El token deberá ser persistido junto con el usuario_<br />
+
+# SOLUCIÓN
 
 _Se realizaron servicios de autenticación, creación de usuarios, actualizar el estado del usuario y conseguir el usuario por el id._
 
 ## Pre-requisitos 📋
 
 * _Las versiones son las siguientes: Java 17 y mvn 3.6.3 (pueden usar la versión embebida de IntelliJ)_
+## Stack Tecnológicos 📋
+
+_Java 17, H2, Maven, JPA, Spring Boot, Spring Security, jsonwebtoken, lombok, OpenAPI (Documentación)_
+
+## Instalación: 🔧
 
 _Para levantar localmente el servicio se puede realizar de 2 maneras:_
 

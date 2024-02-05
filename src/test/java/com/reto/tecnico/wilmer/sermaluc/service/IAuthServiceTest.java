@@ -16,12 +16,12 @@ public class IAuthServiceTest {
     public void setup() {
         authService = Mockito.mock(IAuthService.class);
         authRequest = new AuthRequest();
-        authRequest.setEmail("test@example.com");
-        authRequest.setPassword("password");
+        authRequest.setEmail("wilmer_palomino@gmail.com");
+        authRequest.setPassword("elmaestro");
     }
 
     @Test
-    public void testAuthenticate_Success() {
+    public void testAuthenticateSuccess() {
         AuthResponse expectedResponse = new AuthResponse();
         expectedResponse.setAccess_token("access_token");
         expectedResponse.setExpires_in(3600);
@@ -37,7 +37,7 @@ public class IAuthServiceTest {
     }
 
     @Test
-    public void testAuthenticate_Failure() {
+    public void testAuthenticateFailure() {
         Mockito.when(authService.authenticate(authRequest)).thenReturn(null);
 
         AuthResponse actualResponse = authService.authenticate(authRequest);

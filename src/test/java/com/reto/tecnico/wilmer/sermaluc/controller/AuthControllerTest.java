@@ -28,14 +28,14 @@ class AuthControllerTest {
     }
 
     @Test
-    void authentication_ValidAuthRequest_ReturnsOkResponse() {
+    void authenticationValidAuthRequestReturnsOk() {
         // Arrange
         AuthRequest authRequest = new AuthRequest();
-        authRequest.setEmail("test@example.com");
-        authRequest.setPassword("password");
+        authRequest.setEmail("wilmer_palomino@gmail.com");
+        authRequest.setPassword("elmaestro");
 
         AuthResponse authResponse = new AuthResponse();
-        authResponse.setAccess_token("token");
+        authResponse.setAccess_token("token_example_fail");
         authResponse.setExpires_in(3600);
         authResponse.setToken_type("Bearer");
 

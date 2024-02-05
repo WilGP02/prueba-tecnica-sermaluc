@@ -14,7 +14,7 @@ public class AuthRequestTest {
     @Test
     public void testValidEmail() {
         AuthRequest authRequest = new AuthRequest();
-        authRequest.setEmail("test@example.com");
+        authRequest.setEmail("wilmer_palomino@gmail.com");
         authRequest.setPassword("Elmaestro1$");
 
         assertEquals(0, validator.validate(authRequest).size());
@@ -32,7 +32,7 @@ public class AuthRequestTest {
     @Test
     public void testValidPassword() {
         AuthRequest authRequest = new AuthRequest();
-        authRequest.setEmail("test@example.com");
+        authRequest.setEmail("wilmer_palomino@gmail.com");
         authRequest.setPassword("Elmaestro1$");
 
         assertEquals(0, validator.validate(authRequest).size());
@@ -41,8 +41,8 @@ public class AuthRequestTest {
     @Test
     public void testInvalidPassword() {
         AuthRequest authRequest = new AuthRequest();
-        authRequest.setEmail("test@example.com");
-        authRequest.setPassword("invalidpassword");
+        authRequest.setEmail("wilmer_palomino@gmail.com");
+        authRequest.setPassword("elmaestro1");
 
         assertEquals(1, validator.validate(authRequest).size());
     }
@@ -50,7 +50,7 @@ public class AuthRequestTest {
     @Test
     public void testEmptyPassword() {
         AuthRequest authRequest = new AuthRequest();
-        authRequest.setEmail("test@example.com");
+        authRequest.setEmail("wilmer_palomino@gmail.com");
         authRequest.setPassword("");
 
         assertEquals(1, validator.validate(authRequest).size());

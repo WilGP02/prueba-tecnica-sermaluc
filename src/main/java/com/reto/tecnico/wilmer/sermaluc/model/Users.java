@@ -8,9 +8,8 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -23,7 +22,7 @@ public class Users extends BaseEntity {
   private String name;
   @Email
   private String email;
-  @Pattern(regexp = "^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?\":{}|<>])(?=.*[0-9]).{1,14}$")
+  @Pattern(regexp = "^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?\\\":{}|<>])(?=.*[0-9]).{1,14}$")
   private String password;
 
   private Boolean isActive = Boolean.TRUE;

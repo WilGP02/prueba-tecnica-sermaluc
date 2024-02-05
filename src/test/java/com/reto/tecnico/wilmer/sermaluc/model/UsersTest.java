@@ -10,7 +10,7 @@ public class UsersTest {
     @Test
     public void testGetSetName() {
         Users users = new Users();
-        String name = "John Doe";
+        String name = "Wilmer Palomino";
         users.setName(name);
         Assertions.assertEquals(name, users.getName());
     }
@@ -18,7 +18,7 @@ public class UsersTest {
     @Test
     public void testGetSetEmail() {
         Users users = new Users();
-        String email = "john.doe@example.com";
+        String email = "wilmer_palomino@gmail.com";
         users.setEmail(email);
         Assertions.assertEquals(email, users.getEmail());
     }
@@ -26,7 +26,7 @@ public class UsersTest {
     @Test
     public void testGetSetPassword() {
         Users users = new Users();
-        String password = "P@ssw0rd!";
+        String password = "Elmaestro1$.";
         users.setPassword(password);
         Assertions.assertEquals(password, users.getPassword());
     }

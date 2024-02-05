@@ -46,15 +46,15 @@ class AuthServiceImplTest {
     }
 
     @Test
-    void authenticate_ValidCredentials_ReturnsAuthResponse() {
+    void authenticateValidCredentialsReturnsAuthResponse() {
         // Arrange
         AuthRequest authRequest = new AuthRequest();
-        authRequest.setEmail("test@example.com");
-        authRequest.setPassword("password");
+        authRequest.setEmail("wilmer_palomino@gmail.com");
+        authRequest.setPassword("elmaestro");
 
         Users user = new Users();
-        user.setEmail("test@example.com");
-        user.setPassword("password");
+        user.setEmail("wilmer_palomino@gmail.com");
+        user.setPassword("elmaestro");
         user.setIsActive(true);
 
         when(userRepository.findByEmail(authRequest.getEmail())).thenReturn(Optional.of(user));
@@ -78,11 +78,11 @@ class AuthServiceImplTest {
     }
 
     @Test
-    void authenticate_InvalidCredentials_ThrowsCustomException() {
+    void authenticateInvalidCredentialsThrowsCustomException() {
         // Arrange
         AuthRequest authRequest = new AuthRequest();
-        authRequest.setEmail("test@example.com");
-        authRequest.setPassword("password");
+        authRequest.setEmail("wilmer_palomino@gmail.com");
+        authRequest.setPassword("elmaestro");
 
         when(userRepository.findByEmail(authRequest.getEmail())).thenReturn(Optional.empty());
 
@@ -95,15 +95,15 @@ class AuthServiceImplTest {
     }
 
     @Test
-    void authenticate_InactiveUser_ThrowsCustomException() {
+    void authenticateInactiveUserThrowsCustomException() {
         // Arrange
         AuthRequest authRequest = new AuthRequest();
-        authRequest.setEmail("test@example.com");
-        authRequest.setPassword("password");
+        authRequest.setEmail("wilmer_palomino@gmail.com");
+        authRequest.setPassword("elmaestro");
 
         Users user = new Users();
-        user.setEmail("test@example.com");
-        user.setPassword("password");
+        user.setEmail("wilmer_palomino@gmail.com");
+        user.setPassword("elmaestro");
         user.setIsActive(false);
 
         when(userRepository.findByEmail(authRequest.getEmail())).thenReturn(Optional.of(user));

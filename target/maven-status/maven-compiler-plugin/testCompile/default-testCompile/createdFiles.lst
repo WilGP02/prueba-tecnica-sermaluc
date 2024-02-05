@@ -1,0 +1,15 @@
+com\reto\tecnico\wilmer\sermaluc\exceptions\CustomExceptionHandlerTest.class
+com\reto\tecnico\wilmer\sermaluc\model\response\AuthResponseTest.class
+com\reto\tecnico\wilmer\sermaluc\model\BaseEntityTest.class
+com\reto\tecnico\wilmer\sermaluc\service\IUserServiceTest.class
+com\reto\tecnico\wilmer\sermaluc\model\UsersTest.class
+com\reto\tecnico\wilmer\sermaluc\repository\IUserRepositoryTest.class
+com\reto\tecnico\wilmer\sermaluc\service\impl\UserServiceImplTest.class
+com\reto\tecnico\wilmer\sermaluc\SermalucApplicationTests.class
+com\reto\tecnico\wilmer\sermaluc\controller\AuthControllerTest.class
+com\reto\tecnico\wilmer\sermaluc\controller\UserControllerTest.class
+com\reto\tecnico\wilmer\sermaluc\model\PhoneTest.class
+com\reto\tecnico\wilmer\sermaluc\model\request\AuthRequestTest.class
+com\reto\tecnico\wilmer\sermaluc\exceptions\CustomExceptionTest.class
+com\reto\tecnico\wilmer\sermaluc\service\IAuthServiceTest.class
+com\reto\tecnico\wilmer\sermaluc\service\impl\AuthServiceImplTest.class

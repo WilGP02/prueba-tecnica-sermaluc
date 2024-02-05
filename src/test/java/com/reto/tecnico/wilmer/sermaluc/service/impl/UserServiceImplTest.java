@@ -31,10 +31,10 @@ class UserServiceImplTest {
     }
 
     @Test
-    void registerUser_WithNewUser_ShouldReturnRegisteredUser() {
+    void registerUserWithNewUserShouldReturnRegisteredUser() {
         // Arrange
         Users user = new Users();
-        user.setEmail("test@example.com");
+        user.setEmail("wilmer_palomino@gmail.com");
         user.setLast_login(LocalDateTime.now());
         user.setModified(LocalDateTime.now());
         user.setCreated(LocalDateTime.now());
@@ -58,10 +58,10 @@ class UserServiceImplTest {
     }
 
     @Test
-    void registerUser_WithExistingUser_ShouldThrowCustomException() {
+    void registerUserWithExistingUserShouldThrowCustomException() {
         // Arrange
         Users user = new Users();
-        user.setEmail("test@example.com");
+        user.setEmail("wilmer_palomino@gmail.com");
 
         when(userRepository.findByEmail(user.getEmail())).thenReturn(Optional.of(user));
 
@@ -73,9 +73,9 @@ class UserServiceImplTest {
     }
 
     @Test
-    void updateUser_WithExistingUser_ShouldReturnUpdatedUser() {
+    void updateUserWithExistingUserShouldReturnUpdatedUser() {
         // Arrange
-        String email = "test@example.com";
+        String email = "wilmer_palomino@gmail.com";
         Users user = new Users();
         user.setEmail(email);
         user.setIsActive(false);
@@ -98,9 +98,9 @@ class UserServiceImplTest {
     }
 
     @Test
-    void updateUser_WithNonExistingUser_ShouldThrowCustomException() {
+    void updateUserWithNonExistingUserShouldThrowCustomException() {
         // Arrange
-        String email = "test@example.com";
+        String email = "wilmer_palomino@gmail.com";
 
         when(userRepository.findByEmail(email)).thenReturn(Optional.empty());
 
@@ -112,9 +112,9 @@ class UserServiceImplTest {
     }
 
     @Test
-    void getUserByEmail_WithExistingUser_ShouldReturnUser() {
+    void getUserByEmailWithExistingUserShouldReturnUser() {
         // Arrange
-        String email = "test@example.com";
+        String email = "wilmer_palomino@gmail.com";
         Users user = new Users();
         user.setEmail(email);
 
@@ -131,9 +131,9 @@ class UserServiceImplTest {
     }
 
     @Test
-    void getUserByEmail_WithNonExistingUser_ShouldThrowCustomException() {
+    void getUserByEmailWithNonExistingUserShouldThrowCustomException() {
         // Arrange
-        String email = "test@example.com";
+        String email = "wilmer_palomino@gmail.com";
 
         when(userRepository.findByEmail(email)).thenReturn(Optional.empty());
 

@@ -8,7 +8,7 @@ public class CustomExceptionTest {
 
     @Test
     public void testCustomExceptionWithMessage() {
-        String message = "Test message";
+        String message = "Mensaje de test de prueba.";
         CustomException exception = new CustomException(message);
         assertEquals(message, exception.getMessage());
     }

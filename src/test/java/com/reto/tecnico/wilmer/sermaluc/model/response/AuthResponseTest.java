@@ -8,7 +8,7 @@ public class AuthResponseTest {
     @Test
     public void testGetSetAccessToken() {
         AuthResponse authResponse = new AuthResponse();
-        String accessToken = "testAccessToken";
+        String accessToken = "accessTokenTest";
         authResponse.setAccess_token(accessToken);
         Assertions.assertEquals(accessToken, authResponse.getAccess_token());
     }

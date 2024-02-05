@@ -26,7 +26,7 @@ class UserControllerTest {
     }
 
     @Test
-    void registerUser_ValidUser_ReturnsOkResponse() {
+    void registerValidUserReturnsOK() {
         // Arrange
         Users user = new Users();
         when(userService.registerUser(user)).thenReturn(user);
@@ -41,9 +41,9 @@ class UserControllerTest {
     }
 
     @Test
-    void updateState_ValidEmailAndState_ReturnsOkResponse() {
+    void updateValidStateEmailReturnsOK() {
         // Arrange
-        String email = "test@example.com";
+        String email = "wilmer_palomino@gmail.com";
         Boolean state = true;
         Users user = new Users();
         when(userService.updateUser(email, state)).thenReturn(user);
